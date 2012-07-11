@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  published: false
+  publication_date: 2012-03-17
+  num_of_hits: 1
+  company: 
+
+two:
+  published: false
+  publication_date: 2012-03-17
+  num_of_hits: 1
+  company: 

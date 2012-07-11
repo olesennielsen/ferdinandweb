@@ -1,0 +1,13 @@
+<!-- renders the draganddrop partial -->
+
+<h2><%= @campaign.name %></h2>
+<br />
+<%= link_to 'Show campaign', @campaign, :class => "nice small radius blue button" %>
+<%= link_to 'Back to overview', campaigns_path, :class => "nice small radius blue button" %>
+
+<br />
+<br />
+<hr />
+<%= render :partial => 'draganddrop' %>
+
+

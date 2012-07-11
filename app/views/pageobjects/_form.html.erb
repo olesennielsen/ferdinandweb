@@ -1,0 +1,67 @@
+<!-- the form shown in the javascript dialog to create all the pageobjects -->
+<div id="image_link">
+	<p>Search for images on picasa:</p>
+		<div class="row">
+			<div class="six columns">
+				<input type="text" id="flickrinput" />
+				<br />
+				<input type="submit" value="Search" onclick="javascript:SearchFlickr()" class="nice small radius blue button" />
+				<br />
+				<br />
+				<div id="search-image-block" style="height:400px;width:400px;overflow:scroll;"></div>				
+			</div>
+		</div>
+</div>		
+<div id="video_link">
+	<p>Search for videos on youtube:</p>
+		<div class="row">
+			<div class="six columns">
+				<input type="text" id="youtubeinput" />
+				<br />
+				<input type="submit" value="Search" onclick="javascript:SearchYouTube(document.getElementById('youtubeinput').value)" class="nice small radius blue button" />
+				<br />
+				<br />
+				<div id="search-video-block"  style="height:400px;width:400px;overflow:scroll;"></div>				
+			</div>
+		</div>
+</div>		
+<br />
+
+<%= form_for(pageobject, :html => { :id => "pageobject-form" }) do |f| %> <!-- , :remote => true -->
+  <% if pageobject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pageobject.errors.count, "error") %> prohibited this pageobject from being saved:</h2>
+
+      <ul>
+      <% pageobject.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+		<%= f.hidden_field :page_id, :value => page.id %>
+		<%= f.hidden_field :object_type, :id => "hidden-object" %>
+		<%= f.hidden_field :x, :id => "hidden-x" %>
+		<%= f.hidden_field :y, :id => "hidden-y" %>
+		<%= f.hidden_field :link, :id => "hidden-link" %>
+		
+		<div id="textobject">
+			<div class="field">
+				<%= f.label :textobject, "Text" %>
+				<%= f.text_field :textobject %>
+			</div>	
+	  	<div class="field">
+    		<%= f.label :color %>
+    		<%= f.select :color, Pageobject::COLOR.invert %>			
+			</div>			
+		</div>
+		<div id="add-notification">
+			
+		</div>
+		<br />
+		<div class="actions">
+	    <%= f.submit "Add", :class => "nice small radius blue button" %>
+			<%= link_to 'Back', :back, :class => "nice small radius blue button" %>
+	  </div>
+  
+<% end %>

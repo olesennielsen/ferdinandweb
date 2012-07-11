@@ -1,0 +1,49 @@
+<div class="twelve columns show-on-phones">
+	<h5><%= @campaign.name %></h5><h5><small>Swipe to see more</small></h5>
+</div>
+<!-- show campaign for mobile users with swipe mode  -->
+ <section id="swipeArea" class="row show-on-phones">	 
+   <ul class="twelve columns" id="swipeMeParent">
+		<% @pages.each do |page| %> 
+			<li id="swipeme<%= page.number %>">
+				<%= show_pageobjects(page.get_objects) %>
+			</li>
+		<% end %>
+   </ul>
+ </section>
+
+
+<!-- Show campaign for desktop users --> 
+ <section class="row hide-on-phones">
+ 	<div class="twelve columns">
+		<h3><%= @campaign.name %></h3>
+		<br />
+		<%= link_to 'Back', :back, :class => "nice small radius blue button" %>
+		<br />
+		<br />					
+		<% @pages.each do |page| %>
+			<!-- if it is the first in a row make a new row -->						
+			<% if page.number%4 == 1 %>
+				<div class="row">
+			<% end %>
+			
+				<!-- the page itself with its objects-->
+				<div class="three columns">
+					<div id="draganddropphone">
+						<%= show_pageobjects(page.get_objects) %>
+					</div>
+				</div>						
+							
+			<!-- if it is the last in a row stop the row and set count to 1 -->	
+			<% if page.number%4 == 0 %>
+				</div>
+				<br />
+				<br />
+			<% end %>					
+		<% end %>
+		
+		<% if @pages.count%4 != 0 %>
+			</div>
+		<% end %>		
+ 	</div>
+ </section>

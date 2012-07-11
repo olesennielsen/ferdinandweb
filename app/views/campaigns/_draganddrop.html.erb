@@ -1,0 +1,42 @@
+<!-- the most integral view of the Ferdinand app mostly partials, helper methods calls, and jQuery calls to id's -->
+
+<div class="draganddropframe ui-widget ui-helper-clearfix">
+	<div class="row">
+		<div class="three columns">
+			<br />
+			<h4>Objects</h4>
+			<div id="dialog-form">
+				<%= render :partial => "pageobjects/form", :locals => { :page => @page, :pageobject => Pageobject.new } %>
+			</div>
+			<br />
+			<div id="draggabletext">
+				<p>text</p>
+			</div>			
+			<br />
+			<div id="draggableimage">
+				<p>image</p>
+			</div>
+			<br />
+			<div id="draggablevideo">
+				<p>video</p>
+			</div>
+			<br />
+			<br />		
+		</div>
+		<div class="six columns end" id="draganddropdivs">
+			<br />
+			<h4>Phone</h4>
+			<br />
+			<div class="row">
+				<%= create_page_links(params[:page_number], @page, @pages, @campaign) %>			
+			</div>		
+			<div class="row">
+				<br />
+				<div id="draganddropphone" class="twelvecolumns ui-widget-content ui-state-default">
+					<%= show_pageobjects(@page.get_objects) %>
+				</div>
+			<div>
+		</div>
+	</div>
+	<br />
+</div>

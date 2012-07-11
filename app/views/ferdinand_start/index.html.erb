@@ -1,0 +1,148 @@
+<section class="row hide-on-phones">
+
+	<h2>Welcome to Ferdinand</h2>
+	<br />
+	<p>Ferdinand is an advertising tool where your company's advertising department can design customizable and personal advertising campaigns for mobile devices.</p>
+	<br />
+	<br />	
+	<!-- index view introducing the Ferdinand concept to prospective companies -->
+	<div class="row">
+		<div class="sign_up">
+			<%= link_to 'Sign in', new_designer_session_path, :class => "nice small radius blue button" %><br /><br /><strong>or</strong><br /><br />
+			<%= link_to 'Sign up', new_company_path, :class => "nice small radius blue button" %>
+		</div>
+		
+		<div class="first_arrow">
+			<%= image_tag("right_arrow_small.png") %>
+		</div>
+
+		<div class="create_campaign">
+			<strong>Create campaign</strong><br /><br />
+			<%= link_to 'New campaign', three_latest_path, :class => "nice small radius blue button" %>
+		</div>
+		
+		<div class="second_arrow">
+			<%= image_tag("right_arrow_small.png") %>
+		</div>
+		
+		<div class="add_objects">
+			<strong>Add</strong>
+			<br />
+			<br />
+			<%= link_to "Add text", object_showcase_path, :class => "nice small radius blue button" %>
+			<br />
+			<br />
+			<%= link_to "Add image", object_showcase_path, :class => "nice small radius blue button" %>
+			<br />
+			<br />
+			<%= link_to "Add video", object_showcase_path, :class => "nice small radius blue button" %>			
+		</div>
+		
+		<div class="third_arrow">
+			<%= image_tag("right_arrow_small.png") %>
+		</div>
+		
+		<div class="publish">
+			<%= link_to 'Publish', three_latest_path, :class => "nice small radius blue button" %><br /><br />
+			<strong> and show the world</strong>
+		</div>		
+	</div>
+</section>
+
+<!-- Shown only on phones -->
+<!-- shows the published campaigns -->
+<div class="twelve columns show-on-phones">
+	<h5>Campaigns</h5>
+	<br />
+	<section id="swipeArea" class="row show-on-phones">
+		 <h5><small>Swipe to see more</small></h5>
+	   <ul class="twelve columns" id="swipeMeParent">			 
+				<li id="swipeme1">
+					<h5>Newest</h5>
+					<table>
+						<thead>
+					  	<tr>
+								<th>Name</th>				
+								<th>Company</th>
+								<% if user_signed_in? %>
+									<th>Favorite</th>
+								<% end %>		
+					  	</tr>
+						<thead>
+						<tbody>	
+							<% @published_campaigns.each do |campaign| %>
+								<tr>
+									<td><%= link_to campaign.name, campaign %></td>
+									<td><%= campaign.company.name %></td>
+									<% if user_signed_in? %>
+										<% if @companies.include?(campaign.company) %>
+											<td>Already a favorite</td>
+										<% else %>
+											<td><%= link_to "Make a favorite", make_favorite_path(:company_id => campaign.company.id) %></td>
+										<% end %>
+									<% end %>									
+								</tr>
+							<% end %>
+					</tbody>
+					</table>
+				</li>
+				<li id="swipeme2">
+					<h5>Favorites</h5>
+					<% if user_signed_in? %>
+					    <table>
+								<thead>
+							  	<tr>
+										<th>Name</th>				
+										<th>Company</th>			
+							  	</tr>
+								<thead>
+								<tbody>	
+									<% @companies.each do |company| %>
+										<tr>
+											<% if campaign = company.get_latest_campaign %>
+												<td><%= link_to campaign.name, campaign %></td>
+												<td><%= company.name %></td>
+											<% end %>									
+										</tr>
+									<% end %>
+							</tbody>
+							</table>
+							<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "nice small radius blue button" %>
+					  <% else %>
+					    <%= link_to(image_tag("fblogin.png", :width => "154", :height => "22"), '/users/auth/facebook') %>
+					  <% end %>					
+				</li>
+				<li id="swipeme3">
+					<h5>Recommendations</h5>
+					<% if user_signed_in? %>
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>				
+									<th>Company</th>
+									<th>Friend</th>				
+								</tr>
+							</thead>
+							<tbody>	
+								<% @recommended_companies.each do |rec_comp, name| %>
+									<% if campaign = rec_comp.get_latest_campaign %>
+										<tr>
+											<td><%= link_to campaign.name, campaign %></td>
+											<td><%= rec_comp.name %></td>
+											<td><%= name %></td>
+										</tr>
+									<% end %>
+								<% end %>
+							</tbody>
+						</table>
+						<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "nice small radius blue button" %>
+					<% else %>
+						<%= link_to image_tag("fblogin.png", :width => "154", :height => "22"), '/users/auth/facebook' %>
+					<% end %>
+				</li>
+				<li id="swipeme4">
+					<h5>Information</h5>
+					<p>Ferdinand is a mobile webpage used to view advertising campaigns created with the Ferdinand tool</p>
+				</li>
+	   </ul>
+	 </section>

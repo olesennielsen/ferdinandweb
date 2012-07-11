@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  x: 1
+  y: 1
+  object_type: 1
+  xsize: 1
+  ysize: 1
+  color: 1
+  link: MyString
+  page: 
+
+two:
+  x: 1
+  y: 1
+  object_type: 1
+  xsize: 1
+  ysize: 1
+  color: 1
+  link: MyString
+  page: 

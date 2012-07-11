@@ -1,0 +1,309 @@
+
+@media only screen and (max-width: 767px) {
+	#insideContainer nav ul li { float: none; }
+}
+/* Footer */
+footer.row {
+  margin-top: 80px;
+  border-top: solid 1px #e6e6e6;
+  padding-top: 20px; }
+footer.row h6 {
+  color: #6f6f6f;
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin-bottom: 4px; }
+footer.row p {
+  color: #626262;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 18px; }
+footer.row a {
+  color: #222222; }
+footer.row a:hover {
+  text-decoration: underline; }
+
+/* Mobile Slickness */
+@media only screen and (max-width: 1024px) {
+  #ferdinandBar {
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  #updates {
+    margin-left: 1%; background: none;
+    border-bottom: none;
+    border-right: none;
+    border-top: none; }
+  #updates div.two.columns {
+    width: 14%; }
+  #updates article {
+    width: 76%;
+    border-right: solid 1px #e0e0e0;
+    border-bottom: solid 1px #e0e0e0;
+    border-top: solid 1px #e0e0e0; }
+  #updates aside {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 10px 0; }
+  #updates aside a {
+    display: inline;
+    margin-right: 30px; } }
+@media only screen and (min-width: 967px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    width: 4.08%; }
+}
+@media only screen and (min-width: 950px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    width: 4.08%; }
+}
+@media only screen and (min-width: 942px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 926px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 910px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 894px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 878px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 862px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 846px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 830px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 814px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 798px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 782px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (min-width: 766px) {
+  #gridBg .row .columns, #gridBgShort .row .columns {
+    display:none; }
+}
+@media only screen and (max-width: 780px) {
+  #gridBg {
+    display: none;
+  }
+  header { margin-top: 40px; }
+}
+@media only screen and (max-width: 767px) {
+  #ferdinandBar {
+    padding-left: 20px;
+    padding-right: 20px; }
+  #ferdinandBar h1 {
+    float: left; }
+  #gridBg {
+    display: none;
+  }
+	
+  #insideContainer { top: 20px; }
+  
+  header {
+    margin-top: 40px; }
+  header img {
+    margin-top: 0; }
+  header h1 {
+    font-size: 52px;
+    font-size: 5.2rem; }
+  header h1 small {
+    font-size: 28px;
+    font-size: 2.8rem; }
+  header h2 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    padding: 0 0;
+    margin-bottom: 24px; }
+  header .button.nice {
+    font-size: 17px;
+    font-size: 1.7rem;
+    background-position: 0 -30px; }
+  header .button.nice small {
+    display: none; }
+
+  #main {
+    top: -100px; }
+  
+  #updates div.two.columns {
+    padding-left: 20px; }
+  #updates div.two.columns .button.nice {
+    width: 160px; }
+  #updates article {
+    border-left: solid 1px #e0e0e0;
+    padding-left: 20px; }
+
+  #logos {
+    text-align: center;
+    margin-bottom: 0;
+    border-bottom: none; }
+  #logos h4 {
+    font-size: 20px;
+    font-size: 2rem; }
+  #logos ul li {
+    width: 50%; }
+  #logos ul li a {
+    margin-bottom: 10px; display: block; }
+
+  #featured {
+    height: 200px; }
+
+  footer.row {
+    margin-top: 0;
+    border-top: none; }
+
+  div.slider-nav span.left {
+    left: 94% !important; }
+
+  /* Swipey, swipey $3.50 */
+  
+  #swipeArea {
+    background: #f0f0f0;
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) inset, 0 0 10px rgba(0, 0, 0, 0.27) inset;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) inset, 0 0 10px rgba(0, 0, 0, 0.27) inset;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3) inset, 0 0 10px rgba(0, 0, 0, 0.27) inset;
+    margin-bottom: 0;
+    padding-top: 16px; padding-left: 20px; padding-right: 20px;
+    margin-left: -10px; margin-right: -10px;
+    overflow: hidden; }
+  #swipeArea h5 {
+    margin-bottom: 12px;
+  }
+  #swipeArea h5 small {
+    font-size: 11px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    float: right;
+    margin-top: 6px;
+		margin-right: 10px;
+    text-transform: uppercase;
+    color: #d1d1d1; }
+  #swipeArea ul li p {
+    width: 75%; }
+  #swipeArea ul li {
+    width: 75%;
+    margin-bottom: 10px; }
+
+  ul#swipeMeParent {
+    height: 375px;
+    position: relative; }
+  ul#swipeMeParent.columns {
+    min-height: 100% !important; }
+  ul#swipeMeParent li {
+    position: absolute; }
+  ul#swipeMeParent #swipeme1 {
+    display: block; }
+
+  #insideContainer {
+    margin-top: 0; }
+  #insideContainer nav ul {
+    float: none; }
+  #insideContainer nav ul li {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 1px;
+    padding-top: 0; }
+  #insideContainer nav ul li a {
+    display: block;
+    width: 100%;
+    background: #f2f2f2;
+    padding: 2px 0 4px 5px; }
+  #insideContainer nav ul li .button {
+    padding: 4px 0 5px 5px;
+    line-height: 1.25;
+    border: 0;
+    text-align: left;
+    top: 0;
+    background: #00a5ff;
+    font-size: 15px;
+    text-shadow: none;
+    margin-bottom: 10px; }
+  #insideContainer a.full-width {
+    margin-bottom: 20px; }
+  #insideContainer .examples div {
+    margin-bottom: 20px; } }
+@media only screen and (max-width: 640px) {
+  ul#swipeMeParent {
+    height: 350px; } }
+@media only screen and (max-width: 530px) {
+  ul#swipeMeParent {
+    height: 335px; } }
+@media only screen and (max-width: 520px) {
+  h3 {
+    font-size: 24px;
+    font-size: 2.4rem; }
+
+  h4 {
+    font-size: 22px;
+    font-size: 2.2rem; }
+
+  #gridBg .row .columns {
+    height: 680px; }
+
+  header {
+    margin-top: 40px; }
+
+  #main {
+    top: -100px; }
+
+  #updates {
+    text-align: center;
+    margin-bottom: 30px; }
+  #updates div.two.columns .button.nice {
+    padding: 5px 0 6px 0;
+    width: 100%; }
+
+  aside {
+    padding-left: 0; }
+  aside a {
+    display: block !important;
+    padding-bottom: 0 !important;
+    font-size: 12px;
+    width: 100% !important;
+    background: url() !important;
+    padding-left: 0 !important; }
+  aside a + a {
+    margin-right: 0 !important; }
+
+  #valueProps {
+    margin-bottom: 30px; }
+
+  #logos {
+    margin-bottom: 0; }
+
+  #featured {
+    height: 250px; }
+  #featured div img {
+    width: 50% !important;
+    margin-bottom: 6px; }
+
+  div.slider-nav span.left {
+    left: 89% !important; }
+
+  #swipeArea ul li {
+    width: 75%; } }
+@media only screen and (max-width: 460px) {
+  #swipeArea ul li {
+    width: 75%; } }

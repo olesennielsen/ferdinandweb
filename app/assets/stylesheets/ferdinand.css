@@ -1,0 +1,155 @@
+/* CSS specific for the app, responsible for the ferdinandBar and the frontpage */
+
+#ferdinandBar {
+  background: #00a6fc;
+  border-bottom: solid 4px hsl(320,90%,50%);
+  padding: 15px 20px 13px 20px; }
+  
+
+@media handheld, only screen and (max-width: 767px) {
+	#ferdinandBar { padding: 15px 0px 13px 0px; }
+}
+
+#ferdinandBar h1, #ferdinandBar h2 {
+  margin-bottom: 0;
+  line-height: 1; }
+#ferdinandBar h1 {
+  color: black;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: bold; }
+#ferdinandBar h1 a { color: black; }
+  
+
+#ferdinandBar strong { display: block; margin: 0; padding: 0; height: 14px; line-height: 14px; position: relative; bottom: 4px; }
+#ferdinandBar strong a {
+  line-height: 14px;
+  color: #fff;
+  font-weight: 500;
+  padding-right: 12px;
+}
+#ferdinandBar strong a.button { padding: 4px 10px; font-weight: bold; }
+
+#start_center {
+	height: 10cm;	
+	border: solid 1px #ddd;
+}
+
+.sign_up {
+	position: absolute;
+	top: 200px;
+	left: 20px;
+	text-align: center;
+	height: 240px;
+	width: 160px;	
+	border: solid 1px #ddd;
+	padding-top:40px;	
+}
+
+.create_campaign {
+	position: absolute;
+	top: 200px;
+	left: 280px;
+	text-align: center;
+	height: 240px;
+	width: 160px;
+	border: solid 1px #ddd;
+	padding-top:40px;	
+}
+
+.add_objects {
+	position: absolute;
+	top: 200px;
+	left: 540px;
+	text-align: center;
+	height: 240px;
+	width: 160px;
+	border: solid 1px #ddd;
+	padding-top:40px;
+}
+
+.publish {
+	position: absolute;
+	top: 200px;
+	left: 800px;
+	text-align: center;
+	height: 240px;
+	width: 160px;
+	border: solid 1px #ddd;
+	padding-top:40px;	
+}
+
+.first_arrow {
+	position: absolute;
+	top: 300px;
+	left: 190px;
+	height: 50px;
+}
+
+.second_arrow {
+	position: absolute;
+	top: 300px;
+	left: 450px;
+	height: 50px;
+}
+
+.third_arrow {
+	position: absolute;
+	top: 300px;
+	left: 710px;
+	height: 50px;
+}
+
+#pagecounter {
+	text-align:center;
+}
+
+#previouspage {
+	text-align: right;
+}
+
+#nextpage {
+	text-align: left;
+}
+
+.black p {
+	color: black;
+	font-size: 1.6em;
+}
+.red p { 
+	color: red;
+	font-size: 1.6em;
+}
+
+.green p {
+	color: green;
+	font-size: 1.6em;
+}
+
+.blue p {
+	color: blue;
+	font-size: 1.6em;	
+}
+
+.yellow p {
+	color: yellow;
+	font-size: 1.6em;
+}
+
+.gray p {
+	color: gray;
+	font-size: 1.6em;
+}
+
+#error_explanation {
+	border: solid 1px #ddd;
+	padding: 20px;
+	background-color: #eee;
+	width: 60%;
+}
+
+#error_explanation h2 {
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: bold;
+}

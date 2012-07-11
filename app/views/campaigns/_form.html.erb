@@ -1,0 +1,22 @@
+<!-- form for creating a company -->
+
+<%= form_for(@campaign) do |f| %>
+  <% if @campaign.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@campaign.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% @campaign.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	
+    <%= f.label :name %>
+    <%= f.text_field :name %><br /><br />
+		<%= f.hidden_field :company_id, :value => current_designer.company.id %>
+
+    <%= f.submit 'Create', :class => "nice small radius blue button" %>
+		<%= link_to 'Back', :back, :class => "nice small radius blue button" %>
+<% end %>
